@@ -35,8 +35,10 @@ pipeline {
                    git add deployment.yaml
                    git commit -m "Updated Deployment Manifest"
                 """
-                withCredentials([gitUsernamePassword(credentialsId: 'github', gitToolName: 'Default')]) {
-                  sh "git push https://github.com/shekharSamal9/gitops-register-app.git main"
+                // withCredentials([gitUsernamePassword(credentialsId: 'github', gitToolName: 'Default')]) {
+                //   sh "git push https://github.com/shekharSamal9/gitops-register-app.git main"
+                git remote set-url origin https://shekharsamal9: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@github.com/shekharSamal9/gitops-register-app.git
+                git push -u origin main    
                 }
             }
         }
