@@ -14,10 +14,11 @@ spec:
     spec:
       containers:
         - name: register-app
+
           image: shekharkops/register-app-pipeline:1.0.0-10
           resources:
             limits:
               memory: "256Mi"
-              cpu: "500m"
+              cpu: "502m"
           ports:
             - containerPort: 8080
